@@ -1,5 +1,6 @@
 # base-de-dades
 **Aquest repositori conté la Tasca M1 T01 de Data Science - IT Academy  **
+** Exercicis individuals al repositori **
 
 S’ha creat un esquema anomenat MOVIES que contindrà tota la informació de les pel·lícules en taules interrelacionades entre si.
 Hi ha restriccions (CONSTRAINT) per assegurar que Primary Key i Foreign Key es relacionen correctament entre si a les diferents taules de l’esquema.
