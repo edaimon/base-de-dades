@@ -1,1 +1,36 @@
 # base-de-dades
+**Aquest repositori conté la Tasca M1 T01 de Data Science - IT Academy  **
+
+S’ha creat un esquema anomenat MOVIES que contindrà tota la informació de les pel·lícules en taules interrelacionades entre si.
+Hi ha restriccions (CONSTRAINT) per assegurar que Primary Key i Foreign Key es relacionen correctament entre si a les diferents taules de l’esquema.
+Amb “CREATE SCHEMA movies”, s’han creat les següents taules:
+Tb_genre.
+Per al gènere de les pel·lícules, que inclou camps que no admeteixen valor buits (NOT NULL)
+Variables per les dades del gènere: genre_id, genre_name, created_by_user, created_date, updated_date
+Les variables descrites tenen certes característiques per assegurar consistència: per exemple: CHARACTER VARYING(100) limita la variable a 100 caracters; DEFAULT 'OS_SGAD' li posa un valor per defecte a la varible; DATE que posa la data (sense hora)
+Pk_genre conté la Primary Key, assignada a genre_id
+
+Tb_movie
+Per a les dades de les pel·lícules: títol, data, etc. 
+Variables per les dades de pel·lícules: movie_id, movie_title, movie_date, movie_format, movie_genre_id, created_by_user, created_date, updated_date
+Les característiques de les variables són les mateixes que les descrites a la taula anterior (tb_genre)
+Pk_movie estableix la Primary  Key
+Fk_movie_genre: 
+CONSTRAINT fk_movie_genre FOREIGN KEY (movie_genre_id) REFERENCES movies.tb_genre (genre_id) → aquesta línia garantitza que si s’introdueix un registre a tb_movie amb un valor en el camp movie_genre_id que no existeix a l’altra taula, tb_genre, el sistema donarà error
+
+ Tb_role:
+Variables per les dades de rols: role_id, role_name, created_by_user, created_date, updated_date,
+Les característiques de les variables són les mateixes que les descrites a la taules anteriors
+Pk_role: Primary Key
+
+Tb_person:
+Variables per les dades dels actors i actores: person_id, person_name, person_country, person_dob, person_dod, person_parent_id, created_by_user, created_date, updated_date
+Les característiques de les variables són les mateixes que les descrites a la taules anteriors
+pk_person → Primary Key
+fk_person_parent → Foreign Key. Té les restriccions de que es correspon amb el valor person_id de la taula tb_person
+
+Tb_movie_person:
+Variables per les dades dels personatges: movie_id, person_id, role_id, movie_award_ind, created_by_user, created_date, updated_date
+Les característiques de les variables són les mateixes que les descrites a la taules anteriors excepte pel camp  movie_award_ind, que es defineix com  CHAR(1) NOT NULL . CHAR(1) restringeix la quantitat de caracters al número entre parèntesi, en aquest cas 1.
+Pk_movper → Primary Key
+En té vàries restriccions per a la Foreign Key, en correspondència amb les taules tb_movie, tb_person i tb_role
