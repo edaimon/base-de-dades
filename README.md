@@ -29,8 +29,8 @@ Amb “CREATE SCHEMA movies”, s’han creat les següents taules:
  * pk_person → Primary Key
  * fk_person_parent → Foreign Key. Té les restriccions de que es correspon amb el valor person_id de la taula tb_person
 
-Tb_movie_person:
-Variables per les dades dels personatges: movie_id, person_id, role_id, movie_award_ind, created_by_user, created_date, updated_date
-Les característiques de les variables són les mateixes que les descrites a la taules anteriors excepte pel camp  movie_award_ind, que es defineix com  CHAR(1) NOT NULL . CHAR(1) restringeix la quantitat de caracters al número entre parèntesi, en aquest cas 1.
-Pk_movper → Primary Key
-En té vàries restriccions per a la Foreign Key, en correspondència amb les taules tb_movie, tb_person i tb_role
+5) Tb_movie_person:
+ * Variables per les dades dels personatges: movie_id, person_id, role_id, movie_award_ind, created_by_user, created_date, updated_date
+ * Les característiques de les variables són les mateixes que les descrites a la taules anteriors excepte pel camp  movie_award_ind, que es defineix com  CHAR(1) NOT NULL . CHAR(1) restringeix la quantitat de caracters al número entre parèntesi, en aquest cas 1.
+ * Pk_movper → Primary Key
+ * En té vàries restriccions per a la Foreign Key, en correspondència amb les taules tb_movie, tb_person i tb_role
