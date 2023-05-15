@@ -6,7 +6,7 @@ S’ha creat un esquema anomenat MOVIES que contindrà tota la informació de le
 Hi ha restriccions (CONSTRAINT) per assegurar que Primary Key i Foreign Key es relacionen correctament entre si a les diferents taules de l’esquema.
 
 ![Alt text](./EER-diagram-relacio-taules.svg)
-<img src="./EER-diagram-relacio-taules.svg">
+
 
 Amb “CREATE SCHEMA movies”, s’han creat les següents taules:
 1) Tb_genre.
